@@ -16,8 +16,6 @@ if(document.body.classList.contains('light')){
 }
 });
 
-console.log(inputName)
-
 
 //add items
 //  function createListElement() {
@@ -45,7 +43,6 @@ console.log(inputName)
 function createListElement(e) {
    
     if (inputName.value) {
-      console.log(e);
       console.log(inputName.value);
       allItems.push(inputName.value);
       let newItem;
@@ -55,28 +52,24 @@ function createListElement(e) {
       }
       list.insertAdjacentHTML("afterbegin", newItem);
       inputName.value = "";
-    console.log(allItems);
+      updateCount(1);
     }
 
 
    
   }
-  console.log(allItems)
 
 function createListElement1(e) {
     if (event.keyCode === 13) {
       if (inputName.value) {
-        console.log(e);
         allItems.push(inputName.value);
         let newItem;
-       
         for (let index = 0; index < allItems.length; index++) {
            newItem = `<li class="item"><button class="check"></button> ${allItems[index]} <span class="remove"></li>`;
            
         }
         list.insertAdjacentHTML("afterbegin", newItem);
         inputName.value = "";
-        console.log(allItems);
         updateCount(1)
       }
     }
@@ -86,7 +79,6 @@ function createListElement1(e) {
     item.addEventListener("click", function (e) {
       const el = e.target;
       el.classList.toggle(".checked");
-      console.log(e.target);
     });
   });
 
@@ -111,51 +103,5 @@ function updateCount(num) {
 
 
 
-
-
-
-// inputValue.addEventListener('keyPress',(e)=>{
-//  if(e.charCode === 13 && inputValue.value.length > 0){
-//         createListElement(itemInput.value);
-//         inputValue.value = '';
-//    }
-// // })
-
-
-
-
-
-
-
-
-
-
-// //add
-
-// const addItems = document.querySelector('.button');
-// const list = document.querySelector('#my-list')
-
-// addItems.addEventListener('click',function(e){
-//     const value = document.querySelector('input[type="text"]').value;
-
-//     //create element
-//     const li = document.createElement('li');
-//     const check = document.createElement('span');
-//     const close = document.createElement('span');
-
-//     //append span to li
-//     li.appendChild(check);
-//     li.appendChild(close);
-
-//     //append li to list
-//     list.appendChild(li);
-
-//     //add content
-//     li.innerHTML = value;
-//     check.classList.add("check");
-//     close.classList.add("remove");
-    
-   
-// })
 
 
