@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="light-theme"></div>
+  <header class="showcase">
+    <div class="heading">
+      <h1>Todo</h1>
+      <div class="icon"><img src="/images/icon-sun.svg" alt="" data-theme="dark" id="img"></div>
+    </div>
+    <div class="create">
+      <!-- <button class="btn"></button>  -->
+      <span class="button"></span>
+      <input type="text" 
+      name="chat" 
+      id="type-box" 
+      value=""
+      placeholder="Create a new todo..."
+       class="add-todo">
+      
+    </div>
+  </header>
+  <main>
+<div class="content" id="th">
+    <div class="todos">
+      <ul id="my-list">
+        <!-- <li><span class="check"></span>Complete Todo App on Frontend Mentor<span class="remove"></span></li> -->
+      </ul>
+    </div>
+
+    <div class="mob">
+      <div class="mob-count"><span id="count">0</span> items left</div>
+      <div class="mob-clear">Clear Completed</div>
+    </div>
+    <div class="footer">
+      <div class="count"><span></span> items left</div>
+      <div class="filters">
+        <label>
+          <input type="radio" name="filter" id="all" checked />
+          <span>All</span>
+        </label>
+        <label>
+          <input type="radio" name="filter" id="active" />
+          <span>Active</span>
+        </label>
+        <label>
+          <input type="radio" name="filter" id="completed" />
+          <span>Completed</span>
+        </label>
+      </div>
+      <div class="clear">Clear Completed</div>
+    </div>
+    <div class="dragdrop">
+      <p>Drag and drop to reorder list</p>
+    </div>
+</div>
+ </main>
+
+ 
+ <script src="script.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
